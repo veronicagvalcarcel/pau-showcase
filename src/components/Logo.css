@@ -1,0 +1,20 @@
+/* src/components/Logo.css */
+.logo-img {
+  height: 50px;     /* tamaño base */
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+/* Más grande en desktop */
+@media (min-width: 769px) {
+  .logo-img {
+    height: 70px;
+  }
+}
+
+/* Más pequeño en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .logo-img {
+    height: 40px;
+  }
+}

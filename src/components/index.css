@@ -1,0 +1,72 @@
+/* src/index.css */
+
+/* ===================== VARIABLES GLOBALES ===================== */
+:root {
+  --color-fondo: #E4C775;    /* mostaza */
+  --color-titulo: #B59EC8;   /* lila */
+  --color-texto: #303231;    /* negro */
+}
+
+/* ===================== RESET Y BODY ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Chilanka", cursive;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+/* ===================== TIPOGRAFÍAS ===================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Yuji Boku", serif;
+  color: var(--color-titulo);
+  margin-bottom: 0.5rem;
+}
+
+p, span, li, a {
+  font-family: "Chilanka", cursive;
+  color: var(--color-texto);
+}
+
+/* ===================== LINKS ===================== */
+a {
+  color: var(--color-texto);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-titulo);
+}
+
+/* ===================== CONTENEDORES ===================== */
+main, section, article, aside {
+  padding: 2rem;
+}
+
+/* ===================== BOTONES GLOBALES ===================== */
+button {
+  font-family: "Chilanka", cursive;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+/* ===================== FORMATEO DE LISTAS ===================== */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* ===================== IMÁGENES ===================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,18 +1,19 @@
+// src/components/Header.tsx
 import { useState } from "react"
 import "./Header.css"
+import Logo from "../assets/logo.svg"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-
   const toggleMenu = () => setMenuOpen(!menuOpen)
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <nav className="main-nav" role="navigation" aria-label="Menú principal">
+    <nav className="main-nav">
       <div className="nav-container">
-
-        {/* Logo */}
-        <a href="/" className="logo-link">PAU   DE   CERCA   ART</a>
+        <a href="/" className="logo-link">
+          <img src={Logo} alt="Logo Pau De Cerca Art" />
+        </a>
 
         {/* Links de navegación */}
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
@@ -22,7 +23,7 @@ function Header() {
 
         {/* Botón y hamburguesa */}
         <div className="nav-actions">
-          <a href="https://wa.me/XXXXXXXXXXX" className="contact-btn">
+          <a href="https://www.instagram.com/paudecercaart/" className="contact-btn">
             Contacto
           </a>
 

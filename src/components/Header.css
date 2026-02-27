@@ -1,6 +1,7 @@
+/* src/components/Header.css */
 .main-nav {
-  background-color: rgba(253, 253, 201, 0.95);
-  border-bottom: 1px solid rgba(198, 159, 213, 0.4);
+  background-color: var(--color-fondo); /* mostaza */
+  border-bottom: 1px solid rgba(181, 158, 200, 0.4); /* lila semitransparente */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -17,9 +18,8 @@
 }
 
 .logo-link {
-  font-family: "Yuji Boku", serif;
-  font-size: 2.2rem;
-  color: #c69fd5;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
@@ -37,12 +37,11 @@
 }
 
 .nav-links a {
-  font-family: "Chilanka", cursive;
-  color: #c69fd5;
+  color: var(--color-titulo); /* lila */
 }
 
 .nav-links a:hover {
-  color: #556B2F;
+  color: var(--color-texto); /* negro */
 }
 
 .nav-actions {
@@ -52,16 +51,15 @@
 }
 
 .contact-btn {
-  font-family: "Chilanka", cursive;
-  border: 1px solid #c69fd5;
+  border: 1px solid var(--color-titulo);
   padding: 0.5rem 1.2rem;
   border-radius: 30px;
   transition: 0.3s;
 }
 
 .contact-btn:hover {
-  background-color: #c69fd5;
-  color: #fdfdc9;
+  background-color: var(--color-titulo);
+  color: var(--color-fondo);
 }
 
 /* Hamburguesa */
@@ -77,7 +75,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #c69fd5;
+  background-color: var(--color-titulo);
   border-radius: 2px;
   transition: 0.3s;
 }

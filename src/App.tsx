@@ -1,3 +1,4 @@
+// src/components/Main.tsx
 import Header from "./components/Header"
 
 function App() {
@@ -5,7 +6,10 @@ function App() {
     <>
       <Header />
       <main>
-        <h2>Productos</h2>
+        <section>
+          <h1>Bienvenido a Pau De Cerca Art</h1>
+          <p>Elige la pieza que conecte contigo.</p>
+        </section>
       </main>
     </>
   )
