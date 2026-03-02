@@ -1,7 +1,6 @@
 // src/components/Header.tsx
 import { useState } from "react"
 import "./Header.css"
-import Logo from "../assets/logo.svg"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +11,8 @@ function Header() {
     <nav className="main-nav">
       <div className="nav-container">
         <a href="/" className="logo-link">
-          <img src={Logo} alt="Logo Pau De Cerca Art" />
+          {/* Apunta al logo en public */}
+          <img src="/assets/logo.svg" alt="Pau De Cerca Art" className="logo-img" />
         </a>
 
         {/* Links de navegación */}
