@@ -1,12 +1,13 @@
 import React from 'react';
 import './ProductGrid.css';
-import type { Product } from './data'; // <-- aquí el cambio
+import type { Product } from './data';
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+
   return (
     <a
       href={product.image}

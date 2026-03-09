@@ -10,10 +10,12 @@ interface ProductGridProps {
 }
 
 const ProductGrid: React.FC<ProductGridProps> = ({ selected, setSelected }) => {
+
   const filteredProducts =
     selected === 'todo'
       ? products
       : products.filter(p => p.category === selected);
+
 
   return (
     <section className="product-grid-section">
