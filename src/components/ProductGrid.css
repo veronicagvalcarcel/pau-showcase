@@ -1,33 +1,48 @@
+/* ===================== SECCIÓN PRODUCT GRID ===================== */
 .product-grid-section {
-  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;   /* reduce padding lateral para que el grid ocupe más espacio */
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* ===================== GRID ===================== */
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;              /* 1 columna mobile */
   gap: 1rem;
+  justify-content: center;                 /* centra columnas cuando no llenan todo el ancho */
 }
 
-/* tablet */
-@media (min-width: 600px) {
+/* ===================== TABLET PEQUEÑO / IPAD MINI ===================== */
+@media (min-width: 600px) and (max-width: 899px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas equilibradas */
   }
 }
 
-/* desktop */
+/* ===================== DESKTOP ===================== */
 @media (min-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-content: center; /* centra las columnas */
+}
 }
 
+
+/* ===================== PRODUCT CARD ===================== */
 .product-card {
   display: block;
   text-align: center;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;  /* evita que se encoja demasiado */
 }
 
 .product-card:hover {
@@ -38,10 +53,12 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 6px;
 }
 
 .product-title {
   margin-top: 0.5rem;
   font-size: 1rem;
-  color: #303231; /* negro de tu paleta */
+  color: #303231;
+  font-weight: 500;
 }
